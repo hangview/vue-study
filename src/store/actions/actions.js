@@ -1,9 +1,9 @@
 // 异步修改数据
 
 export default {
-    updateCountAsync( store, data ){
+    updateCountAsync( { commit }, data ){
         setTimeout(()=>{
-            store.commit('updateCount',data.num)
+            commit('updateCount',data.num)
         },data.time);
     }
 }

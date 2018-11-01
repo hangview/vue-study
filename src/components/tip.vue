@@ -20,6 +20,12 @@
         },
         mounted(){
             console.log('tip组件mounted');
+        },
+        activated(){
+            console.log('keep-alive 组件激活了');
+        },
+        deactivated(){
+            console.log('keep-alive 组件停用了');
         }
     }
 </script>

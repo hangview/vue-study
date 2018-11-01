@@ -2,6 +2,7 @@
     import Tip from './tip.vue';
     export default {
         extends: Tip,
+//        mixins: [Tip],    //Array
         data() {
             return {
                 tip:'这是继承自tip组件的extends组件'

@@ -3,6 +3,7 @@
         <p>Vuex</p>
         <p>{{count}}</p>
         <p>{{fullName}}</p>
+        <p><img src="https://vuex.vuejs.org/vuex.png"></p>
     </div>
 </template>
 
@@ -26,6 +27,10 @@
 //                return this.$store.getters.fullName;
 //            }
         },
+        methods:{
+            ...mapMutations(['updateCount']),
+            ...mapActions(['updateCountAsync']),
+        },
         mounted(){
             console.log(this.$store);
             let i =1;
@@ -45,12 +50,6 @@
                 num:2019,
                 time:1000
             })
-
-
-        },
-        methods:{
-            ...mapMutations(['updateCount']),
-            ...mapActions(['updateCountAsync']),
         },
         beforeDestroy(){
             this.$store.commit('updateCount', 0);

@@ -3,6 +3,7 @@ import First from '@/pages/router/first'
 import Second from '@/pages/router/second'
 import RouterPage from '@/pages/router'
 import Arrays from '@/pages/array'
+import Lifecycle from '@/pages/lifecycle'
 import Classes from '@/pages/classes'
 import Events from '@/pages/events'
 import Components from '@/pages/components'
@@ -57,6 +58,7 @@ const routes = [
         }
     },
     { path: '/arrays', name: 'arrays', component: Arrays },
+    { path: '/lifecycle', name: 'lifecycle', component: Lifecycle },
     { path: '/classes', name: 'classes', component: Classes },
     { path: '/events', name: 'events', component: Events },
     { path: '/components', name: 'components', component: Components },

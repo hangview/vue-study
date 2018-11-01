@@ -1,30 +1,40 @@
 <template>
     <div>
         <p>事件绑定和表单</p>
-        <input @keydown.enter="onKeyDown" placeholder="回车修饰符" type="text">
-        <p>父组件监听子组件事件：</p>
-        <Tip @tipEvent="onTipEvent"></Tip>
-        <p>表单：</p>
-        <input type="text" v-model="value1"  placeholder="v-modal,数据双向绑定"  />
-        value1:{{value1}}<br/>
+        <div class="card">
+            <input @keydown.enter="onKeyDown" placeholder="回车修饰符" type="text">
+        </div>
 
-        <input type="text" v-model.lazy="value2"   placeholder="v-modal.lazy"/>
-        {{value2}}<br />
+        <div class="card">
+            <p>父组件监听子组件事件：</p>
+            <Tip @tipEvent="onTipEvent"></Tip>
+        </div>
 
-        <input  type="checkbox" v-model="checkBox" value="1" />
-        <input  type="checkbox" v-model="checkBox" value="2" />
-        <input  type="checkbox" v-model="checkBox" value="3" />
-        {{checkBox}}
+        <div class="card">
+            <p>表单：</p>
+            <input type="text" v-model="value1"  placeholder="v-modal,数据双向绑定"  />
+            value1:{{value1}}<br/>
 
-        <select v-model="selection">
-            <option v-for="item in selectOption" :value="item.value">{{item.text}}</option>
-        </select>
-        {{selection}}
+            <input type="text" v-model.lazy="value2"   placeholder="v-modal.lazy"/>
+            {{value2}}<br />
 
-        <p>计算属性和数据监听：</p>
-        <p class="lz">value1去除数字(watch)：{{value1NoNum}}</p>
-        <p class="lz" v-if="value1Change" >{{value1Change}}</p>
-        <p class="lz">value1去除数字(methods)：{{getValue()}}</p>
+            <input  type="checkbox" v-model="checkBox" value="1" />
+            <input  type="checkbox" v-model="checkBox" value="2" />
+            <input  type="checkbox" v-model="checkBox" value="3" />
+            {{checkBox}}
+
+            <select v-model="selection">
+                <option v-for="item in selectOption" :value="item.value">{{item.text}}</option>
+            </select>
+            {{selection}}
+        </div>
+
+        <div class="card">
+            <p>计算属性和数据监听：</p>
+            <p class="lz">value1去除数字(watch)：{{value1NoNum}}</p>
+            <p class="lz" v-if="value1Change" >{{value1Change}}</p>
+            <p class="lz">value1去除数字(methods)：{{getValue()}}</p>
+        </div>
 
     </div>
 </template>
