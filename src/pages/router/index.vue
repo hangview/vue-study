@@ -11,9 +11,9 @@
             <router-view></router-view>
         </transition>
 
-        <!--<p  class="lz">谁在用琵琶弹奏一曲东风破</p>-->
-        <!--<p class="lz">岁月在墙上剥落看见小时候</p>-->
-        <!--<router-view name="jay"></router-view>-->
+        <p  class="lz">谁在用琵琶弹奏一曲东风破</p>
+        <p class="lz">岁月在墙上剥落看见小时候</p>
+        <router-view name="jay"></router-view>
     </div>
 </template>
 

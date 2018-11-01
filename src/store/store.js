@@ -12,5 +12,33 @@ export default () => new Vuex.Store({
     mutations:mutations,  // 更新state
     actions:actions,      // 异步更新state
     getters:getters,      // computed
+    modules: {            // 模块化
+        a: {
+            namespaced: true,
+            state: {
+                text: '模块A'
+            },
+            mutations: {
+                updateText(state,text){      // a模块里的state
+                    state.text = text;
+                }
+            },
+            getters:{
+                textPlus(state,getters,rootState){
+                    return state.text + rootState;
+                }
+            }
+        },
+        b: {
+            state: {
+                text: '模块B'
+            },
+            mutations: {
+                updateText(state,num){
+
+                }
+            }
+        }
+    }
 })
 

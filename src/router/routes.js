@@ -1,14 +1,15 @@
-import Home from '@/components/pages/home'
-import First from '@/components/pages/router/first'
-import Second from '@/components/pages/router/second'
-import RouterPage from '@/components/pages/router'
-import Arrays from '@/components/pages/array'
-import Classes from '@/components/pages/classes'
-import Events from '@/components/pages/events'
-import Components from '@/components/pages/components'
-import Animations from '@/components/pages/animations'
-import Directives from '@/components/pages/directives'
-import VuexComp from '@/components/pages/vuex'
+import Home from '@/pages/home'
+import First from '@/pages/router/first'
+import Second from '@/pages/router/second'
+import RouterPage from '@/pages/router'
+import Arrays from '@/pages/array'
+import Classes from '@/pages/classes'
+import Events from '@/pages/events'
+import Components from '@/pages/components'
+import Animations from '@/pages/animations'
+import Directives from '@/pages/directives'
+import VuexComp from '@/pages/vuex'
+import VuexModule from '@/pages/vuex_module'
 
 //router-view
 
@@ -62,6 +63,7 @@ const routes = [
     { path: '/animations', name: 'animation', component: Animations },
     { path: '/directives', name: 'directives', component: Directives },
     { path: '/vuex', name: 'vuex', component: VuexComp },
+    { path: '/vuex-module', name: 'vuex-module', component: VuexModule},
 ];
 
 export default routes;

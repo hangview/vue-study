@@ -10,6 +10,7 @@
 
             <li><router-link  to="/router"> vue-router </router-link></li>
             <li><router-link  to="/vuex"> vuex </router-link></li>
+            <li><router-link  to="/vuex-module"> vuex module </router-link></li>
         </ul>
         <router-view></router-view>
     </div>

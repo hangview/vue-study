@@ -18,7 +18,8 @@
                 classC:'italic',
                 isItalic:true,
                 linkCss:{
-                    color:'green'
+                    color:'green',
+                    fontSize:'20px'
                 }
             }
         },

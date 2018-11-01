@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import DeepChild from '../base/deepChild.vue';
+    import DeepChild from '@/components/deepChild.vue';
     export default {
         components:{
             DeepChild

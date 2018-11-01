@@ -54,13 +54,14 @@ Vue.component('GlobalComp',{
         return {
             text:'这是一个全局定义的组件',
     }},
-    //template:'<p>这是一个全局定义的组件</p>',
+    template:'<p>这是一个全局定义的组件</p>',
     render: function(createElement){
         return createElement(
         'div',
-        {class:'abc'},
-        [createElement('p',{},this.text)],
-    )}
+        {},
+        [createElement('p',{class:'lz'},this.text)],
+    )},
+    // render:h=>h(GlobalComp)
 });
 // Vue.component('GlobalComp',GlobalComp);
 

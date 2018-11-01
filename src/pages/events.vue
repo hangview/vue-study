@@ -5,10 +5,10 @@
         <p>父组件监听子组件事件：</p>
         <Tip @tipEvent="onTipEvent"></Tip>
         <p>表单：</p>
-        <input type="text" v-model="value1" placeholder="v-modal,数据双向绑定"  />
+        <input type="text" v-model="value1"  placeholder="v-modal,数据双向绑定"  />
         value1:{{value1}}<br/>
 
-        <input type="text" v-model.lazy="value2" placeholder="v-modal.lazy"/>
+        <input type="text" v-model.lazy="value2"   placeholder="v-modal.lazy"/>
         {{value2}}<br />
 
         <input  type="checkbox" v-model="checkBox" value="1" />
@@ -22,14 +22,15 @@
         {{selection}}
 
         <p>计算属性和数据监听：</p>
-        value1去除数字：{{value1NoNum}}
-        <p v-if="value1Change" >{{value1Change}}</p>
+        <p class="lz">value1去除数字(watch)：{{value1NoNum}}</p>
+        <p class="lz" v-if="value1Change" >{{value1Change}}</p>
+        <p class="lz">value1去除数字(methods)：{{getValue()}}</p>
 
     </div>
 </template>
 
 <script>
-    import Tip from '../base/tip.vue';
+    import Tip from '@/components/tip.vue';
     export default {
         components:{
             Tip
@@ -38,7 +39,7 @@
             return {
                 value1:'',
                 value2:'',
-                checkBox:[],   // radio会返回具体的值
+                checkBox:[1,2],   // radio会返回具体的值
                 selection:'cat',
                 selectOption:[   //注意value要动态绑定
                     {
@@ -57,12 +58,16 @@
         // methods 方法每次调用会触发更新，computed依赖缓存数据是否改动
         computed: {
           value1NoNum(){
+              console.log('computed触发');
               return this.value1.replace(/\d/g,'');
           }
         },
         // 监听属性变化
+        // 'obj.a' || deep:true  默认false
+        //handler , immediate:true  绑定时即执行,
         watch: {
             value1:function(val,oldVal){
+                console.log('watch 触发');
                 let texts = `value1属性监听到变化，old value为${oldVal}，当前value为${val}`;
                 this.value1Change = texts;
             }
@@ -75,6 +80,11 @@
             onTipEvent(params){
                 console.log(params);
                 alert(params);
+            },
+            getValue(){
+                //使用方法来监听数据变化每次data更新会触发方法调用
+                console.log('methods触发')
+                return this.value1.replace(/\d/g,'');
             }
         }
     }

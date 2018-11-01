@@ -21,6 +21,7 @@
             <li  v-pre v-for="(item,index) in list" :key="item+index">{{index}}:{{item}}</li>
         </ul>
 
+        <p>v-text,v-html</p>
     </div>
 
 
@@ -46,8 +47,10 @@
                 this.list.push('福建');
             },
             changeItem(){
-               // this.list[1] = '山东';   //直接赋值、或者改变长度，不会触发渲染
-                Vue.set(this.list,1,'山东');
+                this.list[1] = '山东';   //数组直接赋值某项、或者改变长度，不会触发渲染
+                this.obj.taishan = '人猿泰山';
+//                Vue.set(this.list,1,'山东');
+//                Vue.set(this.obj,'taishan','人猿泰山');
             }
         }
     }

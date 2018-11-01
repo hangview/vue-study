@@ -25,7 +25,7 @@
 <script>
     // v-show,v-if,动态组件,组件根节点都可以用transition
     //mode: in-out , out-in
-    // 相同多元素需要指定key
+    // 相同多元素需要指定key,来让vue进行区分
     export default {
         beforeRouteEnter(to,from,next){
             next();

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p ref="p">组件相关</p>
+        <p >组件相关</p>
         <p>全局组件：</p>
         <global-comp></global-comp>
         <p>父组件props传递子组件属性:</p>
@@ -17,7 +17,7 @@
         </keep-alive>
 
 
-        <p>extend:</p>
+        <p ref="p">extend:</p>
         <extends-component ref="comp"></extends-component>
 
         <p>ref绑定：（console）</p>
@@ -30,10 +30,10 @@
     </div>
 </template>
 <script>
-    import child from '../base/child.vue';
-    import tip from '../base/tip.vue';
-    import ExtendsComponent  from '../base/extends.vue';
-    import DeepChild from '../base/deepChild.vue';
+    import child from '@/components/child.vue';
+    import tip from '@/components/tip.vue';
+    import ExtendsComponent  from '@/components/extends.vue';
+    import DeepChild from '@/components/deepChild.vue';
     export default {
         components:{
             child,

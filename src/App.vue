@@ -1,12 +1,12 @@
 <template>
-    <div id="app">
+    <div>
         <header><router-link to="/">VUE-Learning</router-link></header>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
-import Tip from './components/base/tip';
+import Tip from '@/components/tip';
 export default {
     name: 'app',
     data() {
