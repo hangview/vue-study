@@ -1,10 +1,10 @@
 <template>
     <div>
         <p></p>
-        <p class="red" v-bind:class="classB"> 一段文字 </p>
-        <p :class="[classA,{italic:isItalic}]"> 一段文字 </p>
-        <p :class="classC"> 一段文字 </p>
-        <p :style="linkCss">一段文字</p>
+        <p class="red" v-bind:class="classB"> 最后在北方 </p>
+        <p :class="[classA,{italic:isItalic}]"> 爱上了一场雪 </p>
+        <p :class="classC"> 在南方 </p>
+        <p :style="linkCss">爱上了一张雪白的面庞</p>
     </div>
 </template>
 

@@ -31,10 +31,10 @@
             console.log(this.$data, 'mounted: this.$data')
         },
         beforeUpdate () {   //data更新，还没有开始渲染，在此处再更新data不会重新再触发新的渲染
-            console.log(this, 'beforeUpdate')
+            console.log(this.$data, 'beforeUpdate')
         },
         updated () {
-            console.log(this, 'updated')
+            console.log(this.$data, 'updated')
         },
         activated () {   // <keep-alive> 包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们。  去components动态组件处查看，加到了Tip组件
             console.log(this, 'activated')

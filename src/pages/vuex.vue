@@ -35,11 +35,11 @@
             console.log(this.$store);
             let i =1;
 //            this.$store.state.count = 100 ;   strict=true报错
-            this._interval = setInterval(()=>{
-                this.$store.commit(
-                    'updateCount',  //mutations
-                    i++);
-            },1000);
+//            this._interval = setInterval(()=>{
+//                this.$store.commit(
+//                    'updateCount',  //mutations
+//                    i++);
+//            },1000);
 
             // action
 //            this.$store.dispatch('updateCountAsync',{
@@ -47,8 +47,8 @@
 //                time:2000
 //            })
             this.updateCountAsync({
-                num:2019,
-                time:1000
+                num:2018,
+                time:2000
             })
         },
         beforeDestroy(){
