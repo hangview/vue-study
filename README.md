@@ -25,3 +25,9 @@ npm run test
 npm run lint
 ```
 # vue-study
+
+
+## needs to do
+
+1. 高阶组件
+2. 实现一个v-model
