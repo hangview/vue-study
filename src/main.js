@@ -54,7 +54,7 @@ Vue.component('GlobalComp',{
         return {
             text:'这是一个全局定义的组件',
     }},
-    template:'<p>这是一个全局定义的组件</p>',
+    // template:'<p>这是一个全局定义的组件</p>',
     render: function(createElement){
         return createElement(
         'div',

@@ -2,6 +2,7 @@
     <div>
         <p>生命周期</p>
         <p><input type="text"  v-model="vae" placeholder="一个输入框" ></p>
+        <p>{{vae}}</p>
         <img src="https://cn.vuejs.org/images/lifecycle.png"  width="500px" alt="vue生命周期">
     </div>
 </template>
@@ -26,7 +27,7 @@
             console.log(this.$el, 'beforeMount :this.$el')
             console.log(this.$data, 'beforeMount :this.$data')
         },
-        mounted () {      //vue实例挂载到页面中，可操作dom
+        mounted () {      //vue实例挂载到页面中，可操作dom,请求ajax
             console.log(this.$el, 'mounted :this.$el')
             console.log(this.$data, 'mounted: this.$data')
         },
@@ -34,7 +35,7 @@
             console.log(this.$data, 'beforeUpdate')
         },
         updated () {
-            console.log(this.$data, 'updated')
+            console.log(this, 'updated')
         },
         activated () {   // <keep-alive> 包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们。  去components动态组件处查看，加到了Tip组件
             console.log(this, 'activated')

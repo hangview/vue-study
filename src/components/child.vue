@@ -40,7 +40,7 @@
         },
         mounted(){
             setTimeout(()=> this.slotValue2 = '更新了slot value 2', 3000);
-        }
+        },
 
     }
 </script>

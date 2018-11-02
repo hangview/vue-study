@@ -48,9 +48,10 @@
             },
             changeItem(){
                 this.list[1] = '山东';   //数组直接赋值某项、或者改变长度，不会触发渲染
-                this.obj.taishan = '人猿泰山';
-//                Vue.set(this.list,1,'山东');
-//                Vue.set(this.obj,'taishan','人猿泰山');
+//                  this.$forceUpdate();
+                this.obj.haha = '人猿泰山';
+                Vue.set(this.list,1,'山东');
+                Vue.set(this.obj,'haha','人猿泰山');
             }
         }
     }

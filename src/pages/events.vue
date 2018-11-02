@@ -43,6 +43,7 @@
             <p class="lz">time(computed):{{time}}</p>
             <p class="lz">time(method):{{getTime()}}</p>
         </div>
+        <div>{{obj.a}}</div>
 
     </div>
 </template>
@@ -60,6 +61,8 @@
                 checkBox:[],
                 radio: '',// radio会返回具体的值
                 selection:'cat',
+                obj:{
+                },
                 selectOption:[   //注意value要动态绑定
                     {
                         text:'猫',
@@ -111,6 +114,11 @@
             getTime(){
                 return +new Date();
             }
+        },
+        mounted(){
+            setTimeout(function(){
+                this.obj.a = 2;
+                }.bind(this),5000);
         }
     }
 </script>

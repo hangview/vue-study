@@ -34,12 +34,12 @@
         mounted(){
             console.log(this.$store);
             let i =1;
-//            this.$store.state.count = 100 ;   strict=true报错
-//            this._interval = setInterval(()=>{
-//                this.$store.commit(
-//                    'updateCount',  //mutations
-//                    i++);
-//            },1000);
+            this.$store.state.count = 100 ;   strict=true报错
+            this._interval = setInterval(()=>{
+                this.$store.commit(
+                    'updateCount',  //mutations
+                    i++);
+            },1000);
 
             // action
 //            this.$store.dispatch('updateCountAsync',{
@@ -54,6 +54,7 @@
         beforeDestroy(){
             this.$store.commit('updateCount', 0);
             clearInterval(this._interval);
+            this.setTimeout(()=>{console.log(22);},1000)
         }
     }
 </script>

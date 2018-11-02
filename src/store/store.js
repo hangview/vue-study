@@ -23,7 +23,7 @@ export default () => {
                 store.subscribe((mutation,state) => { console.log(mutation)});
                 store.subscribeAction((action,state)=>{ console.log(action) });
             }
-        ]
+        ],
         // modules: {            // 模块化
         //     a: {
         //         namespaced: true,
@@ -42,8 +42,8 @@ export default () => {
         //         },
         //         actions: {
         //             add({state, commit, rootState}){   //context
-        //                 commit('updateText', rootState.b.text);  //直接找本模块的mutation
-        //                 // commit('b/updateText',rootState.b.text,{root:true});  //全局或跨模块找
+        //                 // commit('updateText', rootState.b.text);  //直接找本模块的mutation
+        //                 commit('b/updateText',rootState.b.text,{root:true});  //全局或跨模块找
         //             }
         //         }
         //     },

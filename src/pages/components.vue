@@ -73,6 +73,8 @@
         mounted(){
             console.log(this.$refs.comp,this.$refs.p);
         },
+        beforeCreated(){
+        }
 
     }
 </script>
