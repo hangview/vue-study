@@ -31,3 +31,7 @@ npm run lint
 
 1. 高阶组件
 2. 实现一个v-model
+
+## 涉及内容及对应具体的实现
+
+![](./src/assets/vue.png)
